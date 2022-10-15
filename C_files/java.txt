@@ -1,0 +1,10 @@
+input:-
+take input for 2 person
+Name
+age 
+Adhar card no.
+no. of vaccines taken
+
+Output:-
+If both the vaccine are taken display u r fully vaccinated
+ 
