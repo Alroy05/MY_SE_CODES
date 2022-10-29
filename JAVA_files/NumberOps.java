@@ -1,6 +1,5 @@
--+import java.util.*;
+import java.util.*;
 
-import javax.lang.model.util.ElementScanner14;
 
 class FibPal{
     void Fib(int x){
