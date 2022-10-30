@@ -66,23 +66,24 @@ void concat(struct node *Start1 ,struct node *Start2)
     ptr->next=Start2;
 }
 
-struct node*copy(struct node* Start)
+void copy(struct node* head)
 {
-    struct node*Start1;
-    struct node*newnode;
-    head1=(struct node*)malloc(sizeof(struct node));
-    temp=Start;
-    Start1->data=temp->data;
-    newnode=Start1;
-    while(temp!=NULL)
-    {
-        newnode->data=temp->data;
-        newnode->next=(struct node*)malloc(sizeof(struct node));
-        temp=temp->next;
-        newnode=newmode->next;
-    
-    }
-    newnode->next=NULL;
+	struct node *tmp,*head2,*newnode;
+	head2=(struct node*)malloc(sizeof(struct node));
+	tmp=head;
+	newnode=head2;
+	while(tmp->next!=NULL)
+	{
+		newnode->data=tmp->data;
+		newnode->next=(struct node*)malloc(sizeof(struct node));
+		tmp=tmp->next;
+		if(tmp!=NULL)
+		newnode=newnode->next;
+		newnode->data=tmp->data;
+	}
+	newnode->next=NULL;
+	display(head);
+	display(head2);
 }
 
 int main()
