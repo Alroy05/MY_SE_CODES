@@ -54,7 +54,7 @@ class Q12
         }
         finally
         {
-            System.out.println("This is finally block executing\nEnd of program showing 3 exceptions");
+            System.out.println("This is finally block being executed\nEnd of program showing 3 exceptions");
         }
     }
 }
