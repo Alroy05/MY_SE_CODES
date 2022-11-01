@@ -20,7 +20,7 @@ void traverse()
     {
         while(ptr!=NULL)
         {
-        printf("%d",ptr->data);
+        printf("%d ",ptr->data);
         ptr = ptr->next;
         }
         printf("\n");

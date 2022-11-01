@@ -32,7 +32,6 @@ void create_CLL()
             }
             ptr->next=new_node;
             new_node->next=start;
-            start=new_node;
         }
         printf("Enter data or -1 to exit\n");
         scanf("%d",&num);

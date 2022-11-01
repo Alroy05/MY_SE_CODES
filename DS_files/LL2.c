@@ -29,7 +29,7 @@ struct node *split(int term,struct node *start,struct node *start2)
     }
     start2=ptr;
     preptr->next=NULL;
-    printf("LL concatenated successfully");
+    printf("LL split successfully\n");
     return start2;
 }
 
