@@ -1,12 +1,12 @@
 import java.util.*;
 import java.lang.*;
 
-class Main1 {
-    public static void main(String[] args) {
+class Q18{
+    public static void main(String args[]) {
        System.out.println("Enter 2 strings");
        Scanner sc = new Scanner(System.in);
-       String str1 = sc.next();
-       String str2 = sc.next();
+       String str1 = args[0];
+       String str2 = args[1];
        StringBuffer s = new StringBuffer(str1);
        s.append(str2);                                    
        System.out.println("After appending: "+s);
@@ -19,10 +19,5 @@ class Main1 {
        s.reverse();
        System.out.println("After reversing: "+s);
        System.out.println("Length is: "+s.length());
-    //    System.out.println("Capacity is: "+s.capacity());
-    //    s.ensureCapacity(25);
-    //    System.out.println("After Ensure Capacity: "+s.capacity());
-    //    System.out.println("The charAt at 4th position: "+s.charAt(3));
-    //    System.out.println("Substring is: "+s.substring(3));
     }
 }
