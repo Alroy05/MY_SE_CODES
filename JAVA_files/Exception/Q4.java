@@ -34,7 +34,6 @@ class Q4{
         }
         catch(Exception e)
         {
-            System.out.println(e);
         }
         
     }   

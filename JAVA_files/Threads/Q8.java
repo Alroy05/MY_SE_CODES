@@ -2,8 +2,6 @@ import java.util.*;
 
 class Q8 
 {
-    int counter=20;
-    int start=1;
     public static void main(String[] args) 
     {
         EvenOdd eo = new EvenOdd();
