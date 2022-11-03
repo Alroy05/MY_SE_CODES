@@ -1,6 +1,6 @@
 import java.util.*;
 
-class 14{
+class Q14{
  
      public static void main(String[] args){
         
@@ -13,7 +13,7 @@ class 14{
     }
 
     public static class Fib{
-        static int fibo(int num){   
+        int fibo(int num){   
             int a =0;    //fibonacci series starting from 0
             int b =1;
             int sum=0;

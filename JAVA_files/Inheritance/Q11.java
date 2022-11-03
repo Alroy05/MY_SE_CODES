@@ -65,7 +65,7 @@ class Manager extends Member
     }   
 }
 
-class exptssss
+class Q11
 {
     public static void main(String[] args) {
         Employee e = new Employee();

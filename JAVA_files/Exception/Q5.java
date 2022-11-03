@@ -1,13 +1,10 @@
 import java.util.*;
 
 class InputException extends Exception{
-      public String toString()
+    
+      InputException()
       {
-        return ("Invalid input");
-      }
-      InputException(String str)
-      {
-
+         System.out.println("Invalid input");
       }
 
 }
@@ -22,7 +19,7 @@ class Q5 {
         {
             if(number>10)
             {
-                throw new InputException(" ");
+                throw new InputException();
             }
             else
             {

@@ -4,6 +4,19 @@ class Publication
 {
     String title;
     double price;
+    void getdata()
+    {
+        System.out.println("ENTER THE NAME AND PRICE ");
+        Scanner sc = new Scanner(System.in);
+        title = sc.nextLine();
+        price = sc.nextDouble();
+    }
+
+    void putdata()
+    {
+        System.out.println("Title: "+title);
+        System.out.println("Price: "+price);
+    }
 }
 
 class Book extends Publication

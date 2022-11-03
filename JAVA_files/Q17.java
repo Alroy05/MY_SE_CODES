@@ -25,13 +25,13 @@ class Operation{
         int a = 0;
         int b =1;
         int sum;
-        for(int i=1;i<=num;i++)
+        for(int i=1;i<=(num-2);i++)
         {
             sum=a+b;
             a=b;
             b=sum;
         }
-        System.out.println("b");
+        System.out.println(b);
     }
 }
 class Q17

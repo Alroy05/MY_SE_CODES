@@ -3,8 +3,6 @@ import java.lang.*;
 
 class Q18{
     public static void main(String args[]) {
-       System.out.println("Enter 2 strings");
-       Scanner sc = new Scanner(System.in);
        String str1 = args[0];
        String str2 = args[1];
        StringBuffer s = new StringBuffer(str1);

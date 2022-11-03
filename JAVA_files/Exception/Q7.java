@@ -1,13 +1,9 @@
 import java.util.*;
 
 class InputException extends Exception{
-    public String toString()
+    InputException()
     {
-      return ("Invalid input");
-    }
-    InputException(String str)
-    {
-
+       System.out.println("Invalid input");
     }
 
 }
@@ -22,11 +18,11 @@ public class Q7 {
         try{
             if(InternalMarks>40)
             {
-                throw new InputException(" ");
+                throw new InputException();
             }
             else if(ExternalMarks>60)
             {
-                throw new InputException(" ");
+                throw new InputException();
             }
             else
                 System.out.println("The total marks are: "+(InternalMarks+ExternalMarks));   
