@@ -2,39 +2,32 @@ import java.util.Scanner;
 
 class NoMatchException extends Exception
 {
-    public String toString()
-    {
-        return ("NO MATCH FOUND");
-    }
 
-    NoMatchException(String str)
+    NoMatchException()
     {
-
+        System.out.println("NO MATCH FOUND");
     }
 }
 
 class Q4{
     public static void main(String[] args) {
-        String country;
-        String Mycountry = new String("India");
         Scanner sc = new Scanner(System.in);
         System.out.println("Which country do you live");
-        country = sc.next();
+        String country = sc.next();
 
         try
         {
-            if(!country.equals(Mycountry))
+            if(country.equals("India"))
             {
-                throw new NoMatchException(" ");
+                System.out.println("You are an Indian citizen");    
             }
             else
             {
-                System.out.println("You are an Indian citizen");
+                throw new NoMatchException();   
             }
         }
         catch(Exception e)
         {
-        }
-        
+        }   
     }   
 }
