@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1667803971 source:c:\users\denni\desktop\codes\cg_qb_codes\2dtransform\main.cpp
+	<graphics.h>
+	<conio.h>
+	<stdio.h>
+	<math.h>
+
