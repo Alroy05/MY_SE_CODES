@@ -31,7 +31,7 @@ int main()
 		  p =(2*dy) - dx;
 
 
-		  putpixel(x, y, WHITE);
+		  putpixel(x, y, YELLOW);
 
 		  do
 		  {
@@ -47,7 +47,7 @@ int main()
 					y = y;
 					p = p + (2*dy);
 			   }
-		   putpixel(x, y, WHITE);
+		   putpixel(x, y, YELLOW);
 
 		  }while(x<=x2);
 	 }
@@ -59,7 +59,7 @@ int main()
 		  p =(2*dx) - dy;
 
 
-		  putpixel(x, y, WHITE);
+		  putpixel(x, y, YELLOW);
 
 		  do
 		  {
@@ -75,7 +75,7 @@ int main()
 					y = y+1;
 					p = p + (2*dx);
 			   }
-		   putpixel(x, y, WHITE);
+		   putpixel(x, y, YELLOW);
 
 		  }while(x<=x2);
 	 }

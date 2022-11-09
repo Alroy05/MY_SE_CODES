@@ -1,40 +1,35 @@
-#include <stdio.h>
-#include <conio.h>
-#include <graphics.h>
-#include <dos.h>
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+#include<dos.h>
 
-int main() {
- int gd = DETECT, gm;
- int i, x, y, flag=0;
- initgraph(&gd, &gm, "");
+int main()
+{
+    int gd=DETECT,gm;
+    int i=0,j=0;
+    initgraph(&gd,&gm," ");
+    while(!kbhit())
+    {
 
- /* get mid positions in x and y-axis */
- x = 150;
- y = getmaxx()/2;
-
-
- while (!kbhit()) {
-  if(x >= getmaxy()-90 || x <= 90)
-     flag = !flag;
-     /* draws the gray board */
-     setcolor(YELLOW);
-     setfillstyle(SOLID_FILL, YELLOW);
-     circle(x, y, 30);
-     floodfill(x, y, YELLOW);
-
- /* delay for 50 milli seconds */
- delay(30);
-
- /* clears screen */
- cleardevice();
- if(flag){
-     x = x + 5;
- } else {
-     x = x - 5;
- }
+    for(i=0;i<=580;i=i+5)
+    {
+        setcolor(BLUE);
+        setfillstyle(SOLID_FILL, GREEN);
+        circle(50+i,400,50);
+        floodfill(50+i,400,BLUE);
+        delay(50);
+        cleardevice();
     }
-
+    for(j=0;j<=580;j=j+5)
+    {
+        setcolor(BLUE);
+        setfillstyle(SOLID_FILL, GREEN);
+        circle(580-j,400,50);
+        floodfill(580-j,400,BLUE);
+        delay(50);
+        cleardevice();
+    }
+    }
     getch();
     closegraph();
-    return 0;
 }
