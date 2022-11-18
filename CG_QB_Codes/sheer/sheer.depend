@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1668091999 source:c:\users\denni\desktop\codes\cg_qb_codes\sheer\main.cpp
+	<stdio.h>
+	<conio.h>
+	<math.h>
+	<graphics.h>
+

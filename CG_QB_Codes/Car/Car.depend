@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1667967817 source:c:\users\denni\desktop\codes\cg_qb_codes\car\main.cpp
+	<stdio.h>
+	<graphics.h>
+	<conio.h>
+	<dos.h>
+

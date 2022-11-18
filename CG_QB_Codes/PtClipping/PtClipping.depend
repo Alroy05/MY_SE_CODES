@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1667920587 source:c:\users\denni\desktop\codes\cg_qb_codes\ptclipping\main.cpp
+	<stdio.h>
+	<conio.h>
+	<graphics.h>
+

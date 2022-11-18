@@ -39,7 +39,7 @@
 
     int  main()
    {
-    int xc,yc,r,gdriver = DETECT, gmode, errorcode;
+    int xc,yc,r,gdriver = DETECT, gmode;
      initgraph(&gdriver, &gmode, "C:\\TURBOC3\\BGI");
        printf("Enter the values of xc and yc :");
        scanf("%d%d",&xc,&yc);
