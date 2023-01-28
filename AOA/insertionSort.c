@@ -19,15 +19,15 @@ int main()
         key=arr[i];
         while(j>=0 && arr[j]>key)
         {
-            arr[j+1]=arr[j]
+            arr[j+1]=arr[j];
             j--;
         }
-        a[j+1]=key;
+        arr[j+1]=key;
     }
 
     for(int i=0;i<n;i++)
     {
-        printf("%d\n",arr[i]);
+        printf("%d ",arr[i]);
     }
 
     return 0;
