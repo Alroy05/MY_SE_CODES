@@ -2,32 +2,27 @@
 
 int main()
 {
-    int n,arr[100],flag=1;
+    int n,arr[100],key,temp;
     printf("Enter the number of digits to be entered");
     scanf("%d",&n);
     
     printf("Enter the elements of the array");
     for(int i=0;i<n;i++)
     {
-       scanf("%d\n",&arr[i]);
+       scanf("%d",&arr[i]);
     
     }
      
-    
-    for(int i=0;i<n-1 && flag==1;i++)
+    for(int i=1;i<n;i++)
     {
-        flag =0;
-        for(int j=0;j<n-1-i;j++)
+        int j = i-1;
+        key=arr[i];
+        while(j>=0 && arr[j]>key)
         {
-            int temp;
-            if(arr[j]>arr[j+1])
-            {
-            temp=arr[j];
-            arr[j]=arr[j+1];
-            arr[j+1]=temp;
-            flag=1;
-            }
+            arr[j+1]=arr[j]
+            j--;
         }
+        a[j+1]=key;
     }
 
     for(int i=0;i<n;i++)
