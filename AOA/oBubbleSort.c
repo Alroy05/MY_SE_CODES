@@ -25,9 +25,16 @@ int main()
             }
         }
     }
-
+    
+    printf("Sorted elements are: ");
     for(int i=0;i<n;i++)
     {
         printf("%d",arr[i]);
     }
 }
+/*********************************************************
+Enter the total elements
+5
+Enter the elements9 2 7 4 6
+Sorted elements are: 24679
+**********************************************************/

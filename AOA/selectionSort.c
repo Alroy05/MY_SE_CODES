@@ -2,32 +2,57 @@
 
 int main()
 {
-    int arr[100],n,temp,index;
-    printf("Enter the total elements\n");
+    int n;
+    printf("Enter the no of elements\n");
     scanf("%d",&n);
-    printf("Enter the elements");
-    for(int i=0;i<n;i++)
+    int a[n];
+    int i,j;
+    printf("Enter the elements\n");
+    for(i=0; i<n; i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-
-    for(int i=0;i<n-1;i++)
+   
+    printf("selection sort sort\n");
+    int index,temp;
+    for(i=0; i<n-1; i++)
     {
-        index =i;
-        for(int j=i+1;j<n;j++)
+      index=i;
+      for(j=i+1; j<n; j++)
+      {
+        if(a[j]<a[index])
         {
-            if(arr[index]>arr[j])
-            {
-                index=j;
-            }
-            temp=arr[i];
-            arr[i]=arr[index];
-            arr[index]=temp;
+           index=j;
         }
-    }
-
-    for(int i=0;i<n;i++)
+      }
+        temp=a[i];
+        a[i]=a[index];
+        a[index]=temp;
+        for(j=0; j<n; j++)
+        {
+        printf("%d ",a[j]);
+       
+        }
+        printf("\n");
+     }
+   
+    printf("Sorted elements\n");
+    for(i=0; i<n; i++)
     {
-        printf("%d",arr[i]);
+        printf("%d ",a[i]);
     }
 }
+
+/**********************************
+Enter the no of elements
+5    
+Enter the elements
+2 9 3 7 4 
+selection sort sort
+2 9 3 7 4 
+2 3 9 7 4 
+2 3 4 7 9 
+2 3 4 7 9 
+Sorted elements
+2 3 4 7 9 
+************************************/
