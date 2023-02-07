@@ -1,5 +1,6 @@
+// ALROY PEREIRA
+// 9631 SE COMPS A
 #include<stdio.h>
-
 void merge(int a[],int low,int mid,int high)
 {
     int n1=mid-low+1;
@@ -42,7 +43,6 @@ void merge(int a[],int low,int mid,int high)
         }
     }
 }
-
 void mergeSort(int a[],int low,int high)
 {
     if(low<high)
@@ -53,7 +53,6 @@ void mergeSort(int a[],int low,int high)
         merge(a,low,mid,high);
     }
 }
-
 int main()
 {
     int n;
@@ -72,6 +71,14 @@ int main()
     {
         printf("%d ",arr[i]);
     }
-    
     return 0;
 }
+/***********************************************
+Enter the number of elements: 5
+Enter the elements: 2
+9
+3
+8
+4
+The Sorted elements are: 2 3 4 8 9 
+***********************************************/

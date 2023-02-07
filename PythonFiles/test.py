@@ -1,4 +1,14 @@
-def convertToCurrency(a=1,b=1,c=1):
-    return a*b*c
-
-print(str(convertToCurrency(a=2,b=5)))
+print("Welcome to the Grade sorter App") 
+grade1=int(input("What is your first grade:")) 
+grade2=int(input("What is your second grade:")) 
+grade3=int(input("What is your third grade:")) 
+grade4=int(input("What is your fourth grade:")) 
+grade=[grade1,grade2,grade3,grade4] 
+print("Your grades are :",grade) 
+grade.sort(reverse=True)
+print("Your grades from highest to lowest are :",grade) 
+print("The last two grades will now will be dropped") 
+print("Removed grade:",grade.pop(-1)) 
+print("Removed grade:",grade.pop(-1)) 
+print("Your remaining grades are: ",grade) 
+print("Nice work! Your Highest grade is :",grade.pop(0))
