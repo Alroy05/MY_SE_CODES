@@ -18,3 +18,10 @@ print(m1.enter_club())
 m1.play_show()
 print(m1.income) 
 print(m2.enter_club())
+
+
+#1
+# def vowel_count(text):
+#     return text.count("a")+text.count("e")+text.count("o")+text.count("u")
+
+# print(vowel_count("vowel"))
