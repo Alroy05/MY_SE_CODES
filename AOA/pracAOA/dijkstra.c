@@ -66,7 +66,7 @@ int main()
     int n,u,graph[20][20];
     printf("Enter the number of vertices: ");
     scanf("%d",&n);
-    printf("Enter the values of adjacency matrix: ");
+    printf("Enter the values of adjacency matrix: \n");
     for(int i=0;i<n;i++)
     {
         for(int j=0;j<n;j++)
@@ -74,6 +74,5 @@ int main()
             scanf("%d",&graph[i][j]);
         }
     }
-    u=0;
     dijkstra(graph,n,0); 
 }
