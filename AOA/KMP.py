@@ -10,9 +10,8 @@ def kmpsearch(txt,pat):
         if(pat[j]==txt[i]):
             i+=1
             j+=1
-        
         if(j==m):
-            print("Pattern found at index: "+str(i-j))
+            print(f"Pattern found at index: {i-j}")
             j=lps[j-1]
         elif(i<n and pat[j]!=txt[i]):
             if(j!=0):

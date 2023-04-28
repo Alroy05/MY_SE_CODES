@@ -50,7 +50,6 @@ int main()
             dmax=j[i].deadline;
         }
     }
-    printf("%d",dmax);
     sort(n,j);
     job sq[dmax];
     for(int i=0;i<dmax;i++)
@@ -74,7 +73,11 @@ int main()
     {
         sum= sum + sq[i].profit;
     }
-
+    
+    for(int i=0;i<dmax;i++)
+    {
+        printf("%d-%d\n",i+1,sq[i].profit);
+    }
     printf("Maximum profits will be %d",sum);
     return 0;
 }

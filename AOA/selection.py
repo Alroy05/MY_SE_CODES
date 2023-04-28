@@ -12,6 +12,6 @@ def selection_sort(A):
         print("Pass "+str(i+1)+": ",A)
     print("Sorted List: ", A)
 
-A = list(input("Enter the list elements: "))
+A = list(map(int,input("Enter the list elements: ").split()))
 selection_sort(A)
 

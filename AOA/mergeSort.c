@@ -1,84 +1,74 @@
-// ALROY PEREIRA
-// 9631 SE COMPS A
 #include<stdio.h>
-void merge(int a[],int low,int mid,int high)
-{
-    int n1=mid-low+1;
-    int n2=high-mid;
-    int Left[n1],Right[n2];
 
-    for(int i=0;i<n1;i++)
-    {
-        Left[i]=a[i+low];
-    }
-    for(int j=0;j<n2;j++)
-    {
-        Right[j]=a[j+mid+1];
-    }
-    int i=0,j=0;
-    for(int k=low;k<=high;k++)
-    {
-        if(i<n1 && j<n2)
-        {
-            if(Left[i]<=Right[j])
-            {
-                a[k]=Left[i];
-                i++;
-            }
-            else
-            {
-                a[k]=Right[j];
-                j++;
-            }
-        }
-        else if(j<n2)
-        {
-            a[k]=Right[j];
-            j++;
-        }
-        else if(i<n1)
-        {
-            a[k]=Left[i];
-            i++;
-        }
-    }
-}
-void mergeSort(int a[],int low,int high)
+void merge(int arr[],int beg,int mid,int end)
 {
-    if(low<high)
+    int temp[20],index=beg,i=beg,j=mid+1,k=beg;
+
+    while(i<=mid && j<=end)
     {
-        int mid=(low+high)/2;
-        mergeSort(a,low,mid);
-        mergeSort(a,mid+1,high);
-        merge(a,low,mid,high);
+        if(arr[i]<arr[j])
+        {
+            temp[index]=arr[i];
+            i++;
+            index++;
+
+        }
+        else{
+            temp[index]=arr[j];
+            j++;
+            index++;
+        }
+    }
+    if(j<=end)
+    {
+        while(j<=end)
+        {
+            temp[index]=arr[j];
+            j++;
+            index++;
+        }
+    }
+    if(i<=mid)
+    {
+        while(i<=mid)
+        {
+            temp[index]=arr[i];
+            i++;
+            index++;
+        }
+    }
+    for(k=beg;k<=end;k++)
+    {
+        arr[k]=temp[k];
     }
 }
+
+void mergeSort(int arr[],int beg,int end)
+{
+    int mid;
+    if(beg<end)
+    {
+        mid=(beg+end)/2;
+        mergeSort(arr,beg,mid);
+        mergeSort(arr,mid+1,end);
+        merge(arr,beg,mid,end);
+    }
+}
+
 int main()
 {
-    int n;
+    int arr[20],n;
     printf("Enter the number of elements: ");
     scanf("%d",&n);
-    int arr[n];
-    printf("Enter the elements: ");
+    printf("Enter the elements: \n");
     for(int i=0;i<n;i++)
     {
-      scanf("%d",&arr[i]);
+       scanf("%d",&arr[i]);
     }
-    
     mergeSort(arr,0,n-1);
-    printf("The Sorted elements are: ");
+    printf("Sorted array: \n");
     for(int i=0;i<n;i++)
     {
-        printf("%d ",arr[i]);
+        printf("%d\t",arr[i]);
     }
-    return 0;
 }
-/***********************************************
-Enter the number of elements: 5
-Enter the elements: 2
-9
-3
-8
-4
-The Sorted elements are: 2 3 4 8 9 
-***********************************************/

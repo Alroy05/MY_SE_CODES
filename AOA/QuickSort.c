@@ -29,11 +29,12 @@ int partition(int a[],int start,int end)
 void quicksort(int arr[],int start,int end)
 {
      int loc;
-     if(start==end)
-     {
-        return;
-     }
-     else if(start<end)
+    //  if(start==end)
+    //  {
+    //     return;
+    //  }
+    //  else 
+     if(start<end)
      {
         loc=partition(arr,start,end);
         quicksort(arr,start,loc-1);

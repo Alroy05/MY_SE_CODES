@@ -17,7 +17,7 @@ def findMinMax(a,low,high):
 
         return minimum,maximum
    
-a= list(map(int,input("Enter the numbers without space: ").split()))
+a= list(map(int,input("Enter the numbers with space: ").split()))
 n = len(a)
 
 min,max=findMinMax(a,0,n-1)
