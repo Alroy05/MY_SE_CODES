@@ -9,7 +9,7 @@ def add_no(total,lock):
         lock.release()
 
 def sub_no(total,lock):
-    for i in range(5):
+    for i in range(100):
         time.sleep(0.01)
         lock.acquire()
         total.value -= 5
