@@ -4,8 +4,6 @@ CREATE Table emp(
    salary numeric(10)
 );
 
-
-
 create or replace function trigger_funct() returns trigger as 
 $$
 BEGIN

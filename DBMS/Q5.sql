@@ -37,14 +37,14 @@ create table employee(
    salary real
 );
 
+-- insert into employee values(1,'alroy',19,'vasai',8765);
+-- insert into employee values(2,'ay',19,'vasai',87265);
+
 create table department(
    id int primary key,
    name varchar(50) NOT null,
    emp_id int references employee(id)
 );
-
--- insert into employee values(1,'alroy',19,'vasai',8765);
--- insert into employee values(2,'ay',19,'vasai',87265);
 
 -- insert into department values(1,'comps',3);
 

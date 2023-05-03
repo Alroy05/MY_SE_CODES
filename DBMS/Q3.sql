@@ -55,17 +55,17 @@ insert into sales_order values
 ('ORD005', '2022-05-05', 'C005', '654 Pine St', 'S002', 'B', 'Y', '2022-05-10', 'COMPLETE'),
 ('ORD006', '2022-06-06', 'C001', '123 Main St', 'S003', 'C', 'N', NULL, 'PROCESSING');
 
-select * from client_master where substring(cName,2,1) = 'a';
+select * from client_master where substring(cName,2,1) = 'a'; 
 select * from client_master where substring(cCity,2,1) = 'a';
 select * from client_master where cCity = 'Mumbai' order by cName;
 select * from client_master where bal_due > 10000;
-select * from sales_order where MONTH(order_date)=1;
+select * from sales_order where extract(month from order_date)=1;
 select * from sales_order where client_no = 'C001' or client_no = 'C002';
 select * from product_master where sell_price > 2000 and sell_price <= 5000;
 select product_no,description,sell_price*1.5 as new_price from product_master where sell_price > 1500;
-select DATE_FORMAT(order_date,'%d-%b-%y') from sales_order;
-SELECT DATE_FORMAT(Dely_date, '%M %d') AS Delivery_date_formatted FROM sales_order;
-SELECT DATE_ADD(CURDATE(), INTERVAL 15 DAY) AS Date_after_15_days;
-SELECT DATEDIFF(Dely_date, CURDATE()) AS Days_elapsed FROM sales_order;
+select to_char(order_date,'dd-month-yy') as order_date_dd_mm_yy from sales_order;
+select to_char(Dely_date,'Month dd') as delivery_date from sales_order;
+select current_date + interval '15 days' as date_15_days_after_today;
+SELECT now() - Dely_date AS Days_elapsed FROM sales_order;
 select min(sell_price) as minimum_price,max(sell_price) as maximum_price from product_master;
 

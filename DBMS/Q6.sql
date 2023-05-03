@@ -45,7 +45,8 @@ select * from sales_order_details;
 select sum(qty_ordered) as total_sold from sales_order_details;
 select qty_disp*product_rate as total_value from sales_order_details;
 select avg(qty_ordered) as avg_qty_sold from sales_order_details where qty_disp*product_rate < 15000;
-SELECT SUM(Qty_disp * Product_rate) AS total_billed FROM sales_order_details WHERE MONTH(order_date); --add a column date
+
+SELECT SUM(Qty_disp * Product_rate) AS total_billed FROM sales_order_details WHERE extract(month from order_date)=1; --add a column date
 SELECT DISTINCT c.cname FROM customer c JOIN cust_order co ON c.cid = co.cid JOIN sales_order_details s ON co.order_no = s.order_no WHERE s.Qty_ordered > 10;
 -- SELECT c.cname, s.Product_no, MAX(s.Qty_ordered) as MaxQtyOrdered
 -- FROM customer c
