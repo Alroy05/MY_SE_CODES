@@ -1,0 +1,41 @@
+Expt 2:- Shell Scripting
+1.	Write a shell script to get the current date, time, username and current working directory.
+2.	Write a shell script to print a number in reverse order. 
+3.	Write a shell script to check if number is within a range.
+4.	Write a shell script to add 1 to n numbers using loops
+5.	Write a shell script to display day of week
+6.	Write a shell script to print the count of files and subdirectories in the specified directory.
+
+Expt 3:-
+(1.) Process related System Calls.
+a) Create a child process in Linux using the fork system call. From the child process obtain the process ID of both child and parent by using getpid and getppid system call.
+b) Explore wait and waitpid before termination of process.
+c) Explain ps command and output in detail. What is Zombie and Orphan Process? Show the output.
+d) Explain fork(), getpid(), getppid(),wait() and waitpid() with syntax.
+(2) File related system calls
+a) Program to copy contents of one file (source) to another file (destination). Finally displaying contents of destination file
+
+Expt 4:- Process Scheduling Algo
+FCFS,RR,SJF,NPriP
+
+Expt 5:-
+1.	WAP to demonstrate how to use lock mechanism to achieve process synchronization.
+2.	WAP to demonstrate the use of Queue mechanism to achieve process synchronization in Producer – Consumer Problem.
+
+Expt 6:-
+1) Detect if a deadlock exists. Also show the processes involved in deadlock
+2) Check if the deadlock can be avoided (using bankers algo.). If yes, give the safe state sequence.
+
+Expt 7:-
+(a)First In First Out    
+(b)Least Recently Used
+
+Expt 8:-
+(a) Best Fit      
+(b) First-Fit                    
+(c) Worst-Fit
+
+Expt 9:-
+(a)FCFS     
+(b)SSTF      
+(c)SCAN

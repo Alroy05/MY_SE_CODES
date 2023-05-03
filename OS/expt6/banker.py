@@ -52,6 +52,3 @@ while True:
     available = [[available[0][j] + allocated[ind][j] for j in range(m)]]
 
 print(totalresources)
-       
-  
-    
