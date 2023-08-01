@@ -1,0 +1,74 @@
+@font-face {
+  font-family: product-sans;
+  src: url(ProductSansRegular.ttf);
+}
+
+body {
+  background-image: linear-gradient(#A0E7E5,#B4F8C8);
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapperDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1{
+  background: -webkit-linear-gradient(#2F5233, #94C973);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: product-sans;
+  font-size: 7rem;
+  margin: 80px 0px 50px 0px;
+  letter-spacing: 3px;
+}
+
+
+
+p {
+  font-family: product-sans;
+  color: #2F5233;
+}
+
+input {
+  height: 40px;
+  width: 550px;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  padding: 2px 0px 2px 20px;
+  font-family: product-sans;
+  background-color: #d2f5dc;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  background-color: #2F5233;
+  border: none;
+  color: #94C973;
+  height: 35px;
+  width: 125px;
+  font-family: product-sans;
+  border-radius: 20px;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: 350ms;
+}
+
+.btn:hover {
+  background-color: #94C973;
+  color: #2F5233;
+}
+
+.links {
+  text-decoration: underline;
+  cursor: pointer;
+}
