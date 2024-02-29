@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <h1>Random Quote Generator</h1>
+  <button id="getQuoteButton" onclick="fetchRandomQuote()">Get Quote</button>
+  <div id="quoteContainer">
+    <p id="quote">Quote will be displayed here</p>
+    <p id="author">Author name will go here</p>
+  </div>  
+
+    <script>
+        // Function to fetch a random quote from the API
+        function fetchRandomQuote() {
+            $.ajax({
+              url: 'https://api.quotable.io/random',
+              method: 'GET',
+              success: function (data){
+                $("#quote").text(data.content);
+                $('#author').text(data.author);
+              },
+              error: function() {
+                alert('Failed!');
+              } 
+            });
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.draggable-area {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #333;
+  position: relative;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  position: absolute;
+  cursor: move;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+  border-bottom: 50px solid red;
+  position: absolute;
+  cursor: move;
+}
+
+.rectangle {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  background-color: yellowgreen;
+  cursor: move;
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 0 5px;
+}
+
+.shape-controls {
+  margin-top: 10px;
+}
+
+.shape-controls button {
+  padding: 5px 10px;
+  margin: 0 5px;
+}

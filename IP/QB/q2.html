@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include jQuery library using the script tag -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jqueryCDN -->
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <!-- Call the fetchWeather function on button click -->
+        <button id="getWeatherButton" onclick="fetchWeather()">Get Weather</button>
+        <div id="weatherInfo">
+            <h2>Weather in <span id="cityName"></span></h2>
+            <p id="temperature"></p>
+            <p id="weatherDescription"></p>
+        </div>
+    </div>
+
+    <script>
+      function fetchWeather() {
+        const city = document.getElementById('cityInput').value;
+        const temperature = document.getElementById('temperature');
+        const des = document.getElementById('weatherDescription');
+        
+        $.ajax({
+          url: `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=54a4215d65eb60a2a0c49c14c289a227`,
+          method: 'GET',
+          success: function(data) {
+            $("#cityName").text(city);
+            temperature.innerHTML = `Temperature: ${data.main.temp}°F`;
+            des.innerHTML = `Weather: ${data.weather[0].description}`;
+          },
+          error: function() {
+            alert('Failed to fetch weather data. Please check the city name and try again.');
+          }
+        });
+      }
+    </script>
+</body>
+</html>

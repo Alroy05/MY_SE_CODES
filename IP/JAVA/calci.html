@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculate Cube</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculate Cube of a Number</h1>
+
+    <form method="post" action="">
+        Enter a number: <input type="number" name="userNumber" required>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <%
+        int cube = 0; // Initialize cube with 0
+
+        // Check if the form has been submitted
+        if (request.getParameter("userNumber") != null) {
+            int userNumber = Integer.parseInt(request.getParameter("userNumber"));
+            cube = calculateCube(userNumber);
+        }
+    %>
+
+    <p>
+        <%
+            if (cube != 0) {
+        %>
+        The cube of <%= request.getParameter("userNumber") %> is <%= cube %>.
+        <%
+            }
+        %>
+    </p>
+
+    <%!
+        // Define a method to calculate the cube of a number
+        int calculateCube(int num) {
+            return num * num * num;
+        }
+    %>
+</body>
+</html>

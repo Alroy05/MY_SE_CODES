@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Handling Techniques</title>
+    <style>
+        /* Styling for demonstration */
+        .event-demo {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Handling Techniques</h2>
+
+    <!-- onmouseover: Change color on mouse over -->
+    <div class="event-demo" onmouseover="changeColor(this)">Mouse Over Me</div>
+
+    <!-- onmouseout: Restore color on mouse out -->
+    <div class="event-demo" onmouseout="restoreColor(this)">Mouse Out Me</div>
+
+    <!-- onclick: Display a message on click -->
+    <div class="event-demo" onclick="showMessage()">Click Me</div>
+
+    <!-- onmousedown: Change color on mouse button down -->
+    <div class="event-demo" onmousedown="changeColor(this)">Mouse Down Me</div>
+
+    <script>
+        // Function to change the background color to green
+        function changeColor(element) {
+            element.style.backgroundColor = "green";
+        }
+
+        // Function to restore the background color to lightblue
+        function restoreColor(element) {
+            element.style.backgroundColor = "lightblue";
+        }
+
+        // Function to display a message in an alert box
+        function showMessage() {
+            alert("Button Clicked!");
+        }
+    </script>
+</body>
+</html>
