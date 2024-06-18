@@ -1,0 +1,1 @@
+start with the name of the day on the 19th day of the 6th month on '24. following by a hash and then the date but dont forget to not include the s in name.
